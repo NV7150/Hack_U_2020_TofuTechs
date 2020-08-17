@@ -1,3 +1,5 @@
+import numpy as np
+
 val=[]
 with open("output")as f:
     for i in f.readlines():
