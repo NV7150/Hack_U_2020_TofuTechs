@@ -7,15 +7,15 @@ import pyaudio
 import wave
 
 
-def record():
-    rec_time = 5                # 録音時間[s]
-    file_path = "output.wav"    # 音声を保存するファイル名
-    fmt = pyaudio.paInt16       # 音声のフォーマット
-    ch = 1                      # チャンネル1(モノラル)
-    sampling_rate = 44100       # サンプリング周波数(入力機器に合わせて)
-    chunk = 2**11               # チャンク（データ点数）
+def record(file_path):
+    rec_time = 10  # 録音時間[s]
+    fmt = pyaudio.paInt16  # 音声のフォーマット
+    ch = 1  # チャンネル1(モノラル)
+    sampling_rate = 44100  # サンプリング周波数(入力機器に合わせて)
+    chunk = 2 ** 11  # チャンク（データ点数）
     audio = pyaudio.PyAudio()
-    index = 1                   # 録音デバイスのインデックス番号
+    index = 3  # 録音デバイスのインデックス番号
+    print(file_path)
 
     # インデックスは https://algorithm.joho.info/programming/python/pyaudio-device-index/ こことか見て
     stream = audio.open(format=fmt, channels=ch, rate=sampling_rate, input=True,
@@ -46,5 +46,7 @@ def record():
     wav.close()
 
 
-if __name__ == '__main__':
-    record()
+def continue_record():
+    path_base = "./PcEnv/Test/outputTest"
+    for i in range(10):
+        record(path_base + str(i) + '.wav')
