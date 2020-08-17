@@ -1,14 +1,13 @@
 import unittest
 import os
-from PcEnv.vggish_parser import parse_with_vggish
+from PcEnv.vggish_parser import vggish_parser
 
 
 class WavParseTestCase(unittest.TestCase):
     def test_parse(self):
-        test_path = os.path.join('PcEnv', 'TestWavs', 'Tester.wav')
-        val = parse_with_vggish('./TestWavs/Tester.wav')
-        print('output:')
-        print(val)
+        parser = vggish_parser()
+        for i in range(10):
+            parser.parse_with_vggish('./TestWavs/Tester.wav')
 
 
 if __name__ == '__main__':

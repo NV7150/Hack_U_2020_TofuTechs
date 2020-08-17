@@ -26,47 +26,24 @@ from PcEnv.models.research.audioset.vggish \
 path_to_checkpoint = os.path.join('.', 'checkpoints', 'vggish_model.ckpt')
 path_to_pca = os.path.join('.', 'checkpoints', 'vggish_pca_params.npz')
 
+class vggish_parser:
+    def __init__(self):
+        self.pproc = vggish_postprocess.Postprocessor(path_to_pca)
 
-def parse_with_vggish(wav_file):
-    examples_batch = vggish_input.wavfile_to_examples(wav_file)
-    print(examples_batch)
-    pproc = vggish_postprocess.Postprocessor(path_to_pca)
-    with tf.Graph().as_default(), tf.compat.v1.Session() as sess:
-        # Define the model in inference mode, load the checkpoint, and
-        # locate input and output tensors.
-        vggish_slim.define_vggish_slim(training=False)
-        vggish_slim.load_vggish_slim_checkpoint(sess, path_to_checkpoint)
-        features_tensor = sess.graph.get_tensor_by_name(
-            vggish_params.INPUT_TENSOR_NAME)
-        embedding_tensor = sess.graph.get_tensor_by_name(
-            vggish_params.OUTPUT_TENSOR_NAME)
+    def parse_with_vggish(self, wav_file):
+        examples_batch = vggish_input.wavfile_to_examples(wav_file)
 
-        # Run inference and postprocessing.
-        [embedding_batch] = sess.run([embedding_tensor],
-                                     feed_dict={features_tensor: examples_batch})
-        print(embedding_batch)
-        postprocessed_batch = pproc.postprocess(embedding_batch)
-        print(postprocessed_batch)
-    return postprocessed_batch
+        with tf.Graph().as_default(), tf.compat.v1.Session() as sess:
+            vggish_slim.define_vggish_slim(training=False)
+            vggish_slim.load_vggish_slim_checkpoint(sess, path_to_checkpoint)
 
-        # Write the postprocessed embeddings as a SequenceExample, in a similar
-        # format as the features released in AudioSet. Each row of the batch of
-        # embeddings corresponds to roughly a second of audio (96 10ms frames), and
-        # the rows are written as a sequence of bytes-valued features, where each
-        # feature value contains the 128 bytes of the whitened quantized embedding.
-        # seq_example = tf.train.SequenceExample(
-        #     feature_lists=tf.train.FeatureLists(
-        #         feature_list={
-        #             vggish_params.AUDIO_EMBEDDING_FEATURE_NAME:
-        #                 tf.train.FeatureList(
-        #                     feature=[
-        #                         tf.train.Feature(
-        #                             bytes_list=tf.train.BytesList(
-        #                                 value=[embedding.tobytes()]))
-        #                         for embedding in postprocessed_batch
-        #                     ]
-        #                 )
-        #         }
-        #     )
-        # )
-    # return [[embedding.tobytes()] for embedding in postprocessed_batch]
+            features_tensor = sess.graph.get_tensor_by_name(
+                vggish_params.INPUT_TENSOR_NAME)
+            embedding_tensor = sess.graph.get_tensor_by_name(
+                vggish_params.OUTPUT_TENSOR_NAME)
+            [embedding_batch] = sess.run([embedding_tensor],
+                                         feed_dict={features_tensor: examples_batch})
+
+            postprocessed_batch = self.pproc.postprocess(embedding_batch)
+
+        return postprocessed_batch
