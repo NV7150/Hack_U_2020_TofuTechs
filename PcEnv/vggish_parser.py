@@ -47,25 +47,26 @@ def parse_with_vggish(wav_file):
         print(embedding_batch)
         postprocessed_batch = pproc.postprocess(embedding_batch)
         print(postprocessed_batch)
+    return postprocessed_batch
 
         # Write the postprocessed embeddings as a SequenceExample, in a similar
         # format as the features released in AudioSet. Each row of the batch of
         # embeddings corresponds to roughly a second of audio (96 10ms frames), and
         # the rows are written as a sequence of bytes-valued features, where each
         # feature value contains the 128 bytes of the whitened quantized embedding.
-        seq_example = tf.train.SequenceExample(
-            feature_lists=tf.train.FeatureLists(
-                feature_list={
-                    vggish_params.AUDIO_EMBEDDING_FEATURE_NAME:
-                        tf.train.FeatureList(
-                            feature=[
-                                tf.train.Feature(
-                                    bytes_list=tf.train.BytesList(
-                                        value=[embedding.tobytes()]))
-                                for embedding in postprocessed_batch
-                            ]
-                        )
-                }
-            )
-        )
-    return seq_example
+        # seq_example = tf.train.SequenceExample(
+        #     feature_lists=tf.train.FeatureLists(
+        #         feature_list={
+        #             vggish_params.AUDIO_EMBEDDING_FEATURE_NAME:
+        #                 tf.train.FeatureList(
+        #                     feature=[
+        #                         tf.train.Feature(
+        #                             bytes_list=tf.train.BytesList(
+        #                                 value=[embedding.tobytes()]))
+        #                         for embedding in postprocessed_batch
+        #                     ]
+        #                 )
+        #         }
+        #     )
+        # )
+    # return [[embedding.tobytes()] for embedding in postprocessed_batch]

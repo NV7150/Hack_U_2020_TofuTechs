@@ -7,6 +7,7 @@ class WavParseTestCase(unittest.TestCase):
     def test_parse(self):
         test_path = os.path.join('PcEnv', 'TestWavs', 'Tester.wav')
         val = parse_with_vggish('./TestWavs/Tester.wav')
+        print('output:')
         print(val)
 
 
