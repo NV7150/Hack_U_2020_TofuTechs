@@ -23,15 +23,15 @@ from PcEnv.models.research.audioset.vggish \
     import vggish_input, vggish_postprocess, vggish_slim, vggish_params
 
 
-path_to_checkpoint = os.path.join('PcEnv', 'checkpoints', 'vggish_model.ckpt')
-path_to_pca = os.path.join('PcEnv', 'checkpoints', 'vggish_model.npz')
+path_to_checkpoint = os.path.join('.', 'checkpoints', 'vggish_model.ckpt')
+path_to_pca = os.path.join('.', 'checkpoints', 'vggish_pca_params.npz')
 
 
 def parse_with_vggish(wav_file):
     examples_batch = vggish_input.wavfile_to_examples(wav_file)
     print(examples_batch)
     pproc = vggish_postprocess.Postprocessor(path_to_pca)
-    with tf.Graph().as_default(), tf.Session() as sess:
+    with tf.Graph().as_default(), tf.compat.v1.Session() as sess:
         # Define the model in inference mode, load the checkpoint, and
         # locate input and output tensors.
         vggish_slim.define_vggish_slim(training=False)
