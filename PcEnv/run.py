@@ -54,7 +54,7 @@ def get_model():
     time_steps = 10
     freq_bins = 128
 
-    classes_num = 527
+    classes_num = 3
 
     input_l = tf.keras.layers.Input(shape=(time_steps, freq_bins))
 
@@ -84,7 +84,7 @@ def get_model():
 
     model.summary()
 
-    model.load_weights("final_weights.h5")  # パスは必要に応じて変更
+    model.load_weights("../AudioSetModel.2.0100.ckpt")  # パスは必要に応じて変更
 
     return model
 
