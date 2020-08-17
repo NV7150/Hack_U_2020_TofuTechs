@@ -13,12 +13,7 @@ import random
 import tensorflow as tf
 import h5py
 import numpy as np
-import keras
-from keras.models import Model
-from keras.layers import (Input, Dense, BatchNormalization, Dropout, Lambda,
-                          Activation, Concatenate)
 import keras.backend as K
-from keras.optimizers import Adam
 
 
 # 下準備
