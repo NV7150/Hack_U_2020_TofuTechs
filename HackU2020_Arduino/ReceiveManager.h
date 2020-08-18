@@ -13,13 +13,16 @@
 class ReceiveManager {
 public:
     //コンストラクタ
-    ReceiveManager(int baudRate);
+    ReceiveManager(int storegeSize);
     //ReceiveBehaviorを継承したクラスのインスタンスを登録
     void registerReceiver(ReceiveBehavior* receiveBehavior);
     //loopごとに呼び出し
     void process();
 
 private:
+    int storageCount = 0;
+    int storageIncrease;
+
     Vector<ReceiveBehavior*>* receivers;
 };
 

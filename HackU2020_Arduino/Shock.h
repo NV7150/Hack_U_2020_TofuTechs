@@ -19,8 +19,6 @@ public:
     void loop();
 
 private:
-    const byte PROTOCOL = (byte)('i');
-
     int motorPin;
     int solenoidPin;
 
