@@ -1,5 +1,6 @@
 import unittest
 import os
+import sys
 from PcEnv.vggish_parser import vggish_parser
 from PcEnv.run import get_model, get_label
 from PcEnv.audioTest import record
@@ -36,5 +37,7 @@ class WavParseTestCase(unittest.TestCase):
 
         print(a)
 
+
 if __name__ == '__main__':
+    sys.path.append('PcEnv/models/research/audioset/vggish')
     unittest.main()

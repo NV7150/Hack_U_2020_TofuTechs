@@ -1,18 +1,9 @@
 # import
 from __future__ import absolute_import, division, print_function, unicode_literals
 # 標準モジュール
-import os
-import sys
-import argparse
-import time
-import logging
-from sklearn import metrics
 import csv
-import random
 # 要インストール
 import tensorflow as tf
-import h5py
-import numpy as np
 import keras.backend as K
 
 
@@ -90,7 +81,7 @@ def get_model():
 
 
 def get_label():
-    ##ラベルリストの生成
+    # ラベルリストの生成
     label = []
     with open("class_labels_indices.csv")as f:
         read = csv.reader(f)

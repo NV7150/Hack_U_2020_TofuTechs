@@ -13,13 +13,15 @@
 # limitations under the License.
 # =============================================================================
 
+# Aug. 2020 copied and modified by Dango from vggish_interfere_test.py
+
 # 使う前にルードディレクトリで以下を実行（ファイルが重すぎてpushできん）
 # mkdir PcEnv/checkpoint; cd PcEnv/checkpoint; curl -O https://storage.googleapis.com/audioset/vggish_model.ckpt; curl -O https://storage.googleapis.com/audioset/vggish_pca_params.npz
 
 import os
 import tensorflow as tf
 
-from PcEnv.models.research.audioset.vggish \
+from PcEnv.vggish \
     import vggish_input, vggish_postprocess, vggish_slim, vggish_params
 
 
