@@ -77,6 +77,67 @@ include CMakeFiles/HackU2020_Arduino.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/HackU2020_Arduino.dir/flags.make
 
+CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o: CMakeFiles/HackU2020_Arduino.dir/flags.make
+CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o: ../ReceiveManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o -c /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/ReceiveManager.cpp
+
+CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/ReceiveManager.cpp > CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.i
+
+CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/ReceiveManager.cpp -o CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.s
+
+CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o: CMakeFiles/HackU2020_Arduino.dir/flags.make
+CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o: ../Shock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o -c /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Shock.cpp
+
+CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Shock.cpp > CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.i
+
+CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Shock.cpp -o CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.s
+
+CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o: CMakeFiles/HackU2020_Arduino.dir/flags.make
+CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o: ../Pin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o -c /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.cpp
+
+CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.cpp > CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.i
+
+CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.cpp -o CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.s
+
+# Object files for target HackU2020_Arduino
+HackU2020_Arduino_OBJECTS = \
+"CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o" \
+"CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o" \
+"CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o"
+
+# External object files for target HackU2020_Arduino
+HackU2020_Arduino_EXTERNAL_OBJECTS =
+
+HackU2020_Arduino: CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o
+HackU2020_Arduino: CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o
+HackU2020_Arduino: CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o
+HackU2020_Arduino: CMakeFiles/HackU2020_Arduino.dir/build.make
+HackU2020_Arduino: CMakeFiles/HackU2020_Arduino.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable HackU2020_Arduino"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HackU2020_Arduino.dir/link.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/HackU2020_Arduino.dir/build: HackU2020_Arduino
+
+.PHONY : CMakeFiles/HackU2020_Arduino.dir/build
+
 CMakeFiles/HackU2020_Arduino.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/HackU2020_Arduino.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/HackU2020_Arduino.dir/clean

@@ -143,6 +143,87 @@ HackU2020_Arduino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/build
 .PHONY : HackU2020_Arduino/fast
 
+Pin.o: Pin.cpp.o
+
+.PHONY : Pin.o
+
+# target to build an object file
+Pin.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o
+.PHONY : Pin.cpp.o
+
+Pin.i: Pin.cpp.i
+
+.PHONY : Pin.i
+
+# target to preprocess a source file
+Pin.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.i
+.PHONY : Pin.cpp.i
+
+Pin.s: Pin.cpp.s
+
+.PHONY : Pin.s
+
+# target to generate assembly for a file
+Pin.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.s
+.PHONY : Pin.cpp.s
+
+ReceiveManager.o: ReceiveManager.cpp.o
+
+.PHONY : ReceiveManager.o
+
+# target to build an object file
+ReceiveManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o
+.PHONY : ReceiveManager.cpp.o
+
+ReceiveManager.i: ReceiveManager.cpp.i
+
+.PHONY : ReceiveManager.i
+
+# target to preprocess a source file
+ReceiveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.i
+.PHONY : ReceiveManager.cpp.i
+
+ReceiveManager.s: ReceiveManager.cpp.s
+
+.PHONY : ReceiveManager.s
+
+# target to generate assembly for a file
+ReceiveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.s
+.PHONY : ReceiveManager.cpp.s
+
+Shock.o: Shock.cpp.o
+
+.PHONY : Shock.o
+
+# target to build an object file
+Shock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o
+.PHONY : Shock.cpp.o
+
+Shock.i: Shock.cpp.i
+
+.PHONY : Shock.i
+
+# target to preprocess a source file
+Shock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.i
+.PHONY : Shock.cpp.i
+
+Shock.s: Shock.cpp.s
+
+.PHONY : Shock.s
+
+# target to generate assembly for a file
+Shock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.s
+.PHONY : Shock.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -152,6 +233,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HackU2020_Arduino"
+	@echo "... Pin.o"
+	@echo "... Pin.i"
+	@echo "... Pin.s"
+	@echo "... ReceiveManager.o"
+	@echo "... ReceiveManager.i"
+	@echo "... ReceiveManager.s"
+	@echo "... Shock.o"
+	@echo "... Shock.i"
+	@echo "... Shock.s"
 .PHONY : help
 
 

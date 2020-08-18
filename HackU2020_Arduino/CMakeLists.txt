@@ -17,5 +17,11 @@ include_directories(/Applications/Arduino.app/Contents/Java/libraries/Servo/src)
 include_directories(~/Documents/Arduino/libraries/VL53L0X)
 include_directories(/Applications/Arduino.app/Contents/Resources)
 include_directories(/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src/)
+include_directories(~/Documents/Arduino/libraries/Vector/src)
 
-add_executable(HackU2020_Arduino HackU2020_Arduino.ino)
+add_executable(HackU2020_Arduino
+        HackU2020_Arduino.ino
+        ReceiveManager.cpp ReceiveManager.h
+        ReceiveBehavior.h
+        Shock.cpp Shock.h
+        Pin.cpp Pin.h Pins.h)

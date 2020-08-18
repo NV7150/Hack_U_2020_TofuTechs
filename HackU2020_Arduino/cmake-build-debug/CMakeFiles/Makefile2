@@ -94,12 +94,12 @@ clean: CMakeFiles/HackU2020_Arduino.dir/clean
 CMakeFiles/HackU2020_Arduino.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num= "Built target HackU2020_Arduino"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target HackU2020_Arduino"
 .PHONY : CMakeFiles/HackU2020_Arduino.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/HackU2020_Arduino.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HackU2020_Arduino.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/HackU2020_Arduino.dir/rule
