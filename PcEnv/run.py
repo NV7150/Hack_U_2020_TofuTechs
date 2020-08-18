@@ -82,4 +82,4 @@ def get_model():
 
 def get_label():
     # ラベルリストの生成
-    return {0: 'impact', 1: 'water', 2:'else'}
+    return {0: 'water', 1: 'impact', 2: 'else'}
