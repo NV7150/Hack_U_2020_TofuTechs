@@ -113,13 +113,16 @@
 		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/HackU2020_Arduino.ino">
 			<Option target="HackU2020_Arduino"/>
 		</Unit>
-		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/PIns.h">
-			<Option target="HackU2020_Arduino"/>
-		</Unit>
 		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.cpp">
 			<Option target="HackU2020_Arduino"/>
 		</Unit>
 		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.h">
+			<Option target="HackU2020_Arduino"/>
+		</Unit>
+		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pins.h">
+			<Option target="HackU2020_Arduino"/>
+		</Unit>
+		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Protocols.h">
 			<Option target="HackU2020_Arduino"/>
 		</Unit>
 		<Unit filename="/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/ReceiveBehavior.h">
