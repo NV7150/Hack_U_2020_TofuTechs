@@ -82,10 +82,4 @@ def get_model():
 
 def get_label():
     # ラベルリストの生成
-    label = []
-    with open("class_labels_indices.csv")as f:
-        read = csv.reader(f)
-        for i in read:
-            label.append(i[2])
-    label.pop(0)
-    return label
+    return {0: 'water', 1: 'impact', 2: 'else'}

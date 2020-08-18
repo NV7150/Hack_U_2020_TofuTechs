@@ -28,7 +28,8 @@ from PcEnv.vggish \
 path_to_checkpoint = os.path.join('.', 'checkpoints', 'vggish_model.ckpt')
 path_to_pca = os.path.join('.', 'checkpoints', 'vggish_pca_params.npz')
 
-class vggish_parser:
+
+class VggishParser:
     def __init__(self):
         self.pproc = vggish_postprocess.Postprocessor(path_to_pca)
 
