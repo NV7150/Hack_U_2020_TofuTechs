@@ -4,6 +4,18 @@
 
 using namespace Pins;
 
+/*
+ * Usage
+ * Shock.hを参考に，ReceiveBehaviorを景勝したクラスを作成
+ * 注意！継承する時は「クラス名 : public ReceiveBehavior」として，publicを必ずつける！
+ * received(byte)メソッドに，なんらかのシリアルを受け取った際の処理を作成
+ * （受け取った信号が自分にむけたものかの判断も込みで）
+ * 以下を参考にしてreceiveMan->registerReceiverを使ってreceiveManにクラスを登録
+ * あとはだいたいやってくれる
+ *
+ * loopごとにしたい処理月たらShockみたいな感じにpublicメソッド実装してね
+ * */
+
 ReceiveManager* receiveMan;
 Shock* shock;
 
