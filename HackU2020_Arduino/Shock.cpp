@@ -3,7 +3,6 @@
 //
 
 #include "Shock.h"
-#include "Protocols.h"
 
 Shock::Shock(const Pin *motorPin,const Pin *solenoidPin)
 : motorPin(motorPin->getPinNumber()), solenoidPin(solenoidPin->getPinNumber()){
@@ -11,9 +10,9 @@ Shock::Shock(const Pin *motorPin,const Pin *solenoidPin)
 }
 
 void Shock::received(byte b) {
-    if(b == PROTOCOL_IMPACT){
+    if(b == this->PROTOCOL){
         manageShock();
-    }else if(b == PROTOCOL_ELSE){
+    }else{
         disableShock();
     }
 }
@@ -26,19 +25,12 @@ void Shock::disableShock() {
     this->isEnable = false;
 }
 
-//void debug(){
-//    tone(12, 450, 1000);
-//    delay(1000);
-//}
-
 void Shock::loop() {
     if(this->isEnable) {
         digitalWrite(motorPin, HIGH);
 
         this->solenoidState = (solenoidState == HIGH) ? LOW : HIGH;
         digitalWrite(solenoidPin, solenoidState);
-
-//        debug();
     }else{
         digitalWrite(motorPin, LOW);
 

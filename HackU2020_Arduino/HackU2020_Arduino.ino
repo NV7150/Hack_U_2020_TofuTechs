@@ -23,8 +23,7 @@ Water *water;
 
 void setup()
 {
-    Serial.begin(115200);
-    receiveMan = new ReceiveManager(1);
+    receiveMan = new ReceiveManager(115200);
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
     water = new Water(&FAN_PIN);
 
