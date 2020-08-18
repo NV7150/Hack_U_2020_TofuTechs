@@ -11,12 +11,10 @@ class SoundJudge:
         self.sample_time = sample_time
         self.parser = VggishParser()
         self.wav_path = wav_path
-        self.recorder = AudioRecorder(device_index, wav_path)
         self.label = get_label()
         self.model = get_model()
 
     def record_and_judge(self):
-        self.recorder.record(self.sample_time)
         data_v = self.parser.parse_with_vggish(self.wav_path)
 
         if len(data_v) > 10:
