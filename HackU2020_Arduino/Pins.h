@@ -7,9 +7,11 @@
 
 #include "Pin.h"
 
-namespace Pins{
-    const Pin MOTOR_PIN(13, DIG_OUT);
-    const Pin SOLENOID_PIN(7, DIG_OUT);
-}
+namespace Pins
+{
+    const Pin MOTOR_PIN(8, DIG_OUT);
+    const Pin SOLENOID_PIN(13, DIG_OUT);
+    const Pin FAN_PIN(7, DIG_OUT);
+} // namespace Pins
 
 #endif //HACKU2020_ARDUINO_PINS_H
