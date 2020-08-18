@@ -1,5 +1,6 @@
 #include "ReceiveManager.h"
 #include "Shock.h"
+#include "Water.h"
 #include "Pins.h"
 
 using namespace Pins;
@@ -16,17 +17,22 @@ using namespace Pins;
  * loopごとにしたい処理月たらShockみたいな感じにpublicメソッド実装してね
  * */
 
-ReceiveManager* receiveMan;
-Shock* shock;
+ReceiveManager *receiveMan;
+Shock *shock;
+Water *water;
 
-void setup(){
+void setup()
+{
     receiveMan = new ReceiveManager(115200);
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
+    water = new Water(&FAN_PIN);
 
     receiveMan->registerReceiver(shock);
 }
 
-void loop(){
+void loop()
+{
     receiveMan->process();
     shock->loop();
+    water->loop();
 }
