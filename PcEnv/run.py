@@ -2,6 +2,7 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 # 標準モジュール
 import csv
+import os
 # 要インストール
 import tensorflow as tf
 import keras.backend as K
@@ -75,7 +76,8 @@ def get_model():
 
     model.summary()
 
-    model.load_weights("../AudioSetModel.2.0100.ckpt")  # パスは必要に応じて変更
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'AudioSetModel.2.0100.ckpt')
+    model.load_weights(model_path)  # パスは必要に応じて変更
 
     return model
 

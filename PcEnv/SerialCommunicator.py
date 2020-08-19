@@ -5,7 +5,7 @@ import serial.tools.list_ports as list_ports
 
 class SerialCommunicator:
     # ハードの都合上，open_alwaysは機能しないのでTrue推奨　絶対closeすること！
-    def __init__(self, bps:int, open_always=True):
+    def __init__(self, bps: int, open_always=True):
         ports = list_ports.comports()
 
         found = []
@@ -14,12 +14,11 @@ class SerialCommunicator:
             if type(port.manufacturer) is str and 'Arduino' in port.manufacturer:
                 found.append(port)
 
-        selected = found[0]
-
         if len(found) <= 0:
             raise EnvironmentError("No Arduino in ports")
 
-        elif len(found) > 1:
+        selected = found[0]
+        if len(found) > 1:
             print('Select from these ports: ')
             for i in range(len(found)):
                 print(str(i) + ':' + found[i].name)

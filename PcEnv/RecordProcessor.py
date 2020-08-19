@@ -5,8 +5,8 @@ from PcEnv.SerialCommunicator import SerialCommunicator
 from PcEnv.SoundJudger import SoundJudge
 from PcEnv.AudioRecorder import AudioRecorder
 
-path_wav = './RecordWav.wav'
-path_wav_process = './ProcessWav.wav'
+path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
+path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
 index = 2
 baud_rate = 115200
 

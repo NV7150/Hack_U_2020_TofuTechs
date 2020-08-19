@@ -25,8 +25,8 @@ from PcEnv.vggish \
     import vggish_input, vggish_postprocess, vggish_slim, vggish_params
 
 
-path_to_checkpoint = os.path.join('.', 'checkpoints', 'vggish_model.ckpt')
-path_to_pca = os.path.join('.', 'checkpoints', 'vggish_pca_params.npz')
+path_to_checkpoint = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'checkpoints', 'vggish_model.ckpt')
+path_to_pca = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'checkpoints', 'vggish_pca_params.npz')
 
 
 class VggishParser:
