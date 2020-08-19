@@ -1,11 +1,10 @@
 import time
 import os
 
+os.chdir('../..')
+
 from PcEnv.RecordProcessor import RecordProcessor
 from PcEnv.AudioRecorder import check_device
-
-
-os.chdir('../..')
 
 def process():
     rec_pros = RecordProcessor(10)
