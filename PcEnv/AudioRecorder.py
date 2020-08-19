@@ -6,13 +6,15 @@
 import pyaudio
 import wave
 
+from PcEnv.FileLocker import FileLocker
+
 
 class AudioRecorder:
     def __init__(self, device_index: int, file_path: str):
         self.device_index = device_index
         self.file_path = file_path
 
-    def record(self, rec_time):
+    def record(self, rec_time, locker:FileLocker = None):
         fmt = pyaudio.paInt16  # 音声のフォーマット
         ch = 1  # チャンネル1(モノラル)
         sampling_rate = 44100  # サンプリング周波数(入力機器に合わせて)
@@ -40,6 +42,11 @@ class AudioRecorder:
         stream.close()
         audio.terminate()
 
+        if locker is not None:
+            while locker.is_lock:
+                pass
+            locker.lock()
+
         # 録音データをファイルに保存
         wav = wave.open(self.file_path, 'wb')
         wav.setnchannels(ch)
@@ -47,6 +54,9 @@ class AudioRecorder:
         wav.setframerate(sampling_rate)
         wav.writeframes(b''.join(frames))
         wav.close()
+
+        if locker is not None:
+            locker.unlock()
 
 
 def check_device():

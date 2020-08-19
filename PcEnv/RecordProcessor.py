@@ -4,6 +4,7 @@ import os
 from PcEnv.SerialCommunicator import SerialCommunicator
 from PcEnv.SoundJudger import SoundJudge
 from PcEnv.AudioRecorder import AudioRecorder
+from PcEnv.FileLocker import FileLocker
 
 path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
 path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
@@ -31,6 +32,7 @@ class RecordProcessor:
         self.process_th = threading.Thread(target=self.process)
         self.is_end = False
         self.is_new_record_setted = False
+        self.fileLocker = FileLocker()
 
         self.record_th.start()
         self.process_th.start()
@@ -43,7 +45,7 @@ class RecordProcessor:
 
     def record(self):
         while not self.is_end:
-            self.audioRec.record(self.sample_sec)
+            self.audioRec.record(self.sample_sec, locker=self.fileLocker)
             self.flag_new_record(set_flag=True)
 
     def process(self):
@@ -53,7 +55,12 @@ class RecordProcessor:
 
             self.flag_new_record(set_flag=False)
 
+            while self.fileLocker.is_lock:
+                pass
+            self.fileLocker.lock()
+            os.remove(path_wav_process)
             os.rename(path_wav, path_wav_process)
+            self.fileLocker.unlock()
 
             code = self.judge.record_and_judge()
 
