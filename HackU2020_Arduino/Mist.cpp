@@ -21,6 +21,7 @@ void Mist::loop() {
         if(!processEnabled){
             pushStart = millis();
             digitalWrite(mistPin, HIGH);
+            processEnabled = true;
         }
         if(millis() - pushStart > PUSHING_TIME){
             digitalWrite(mistPin, LOW);
