@@ -24,4 +24,5 @@ add_executable(HackU2020_Arduino
         ReceiveManager.cpp ReceiveManager.h
         ReceiveBehavior.h
         Shock.cpp Shock.h
-        Pin.cpp Pin.h Pins.h Protocols.h)
+        Pin.cpp Pin.h Pins.h Protocols.h
+        Water.h Water.cpp)

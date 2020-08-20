@@ -224,6 +224,33 @@ Shock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.s
 .PHONY : Shock.cpp.s
 
+Water.o: Water.cpp.o
+
+.PHONY : Water.o
+
+# target to build an object file
+Water.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Water.cpp.o
+.PHONY : Water.cpp.o
+
+Water.i: Water.cpp.i
+
+.PHONY : Water.i
+
+# target to preprocess a source file
+Water.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Water.cpp.i
+.PHONY : Water.cpp.i
+
+Water.s: Water.cpp.s
+
+.PHONY : Water.s
+
+# target to generate assembly for a file
+Water.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Water.cpp.s
+.PHONY : Water.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -242,6 +269,9 @@ help:
 	@echo "... Shock.o"
 	@echo "... Shock.i"
 	@echo "... Shock.s"
+	@echo "... Water.o"
+	@echo "... Water.i"
+	@echo "... Water.s"
 .PHONY : help
 
 

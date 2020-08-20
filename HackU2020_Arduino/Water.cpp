@@ -48,9 +48,9 @@ void Water::switchWater()
         break;
     }
     digitalWrite(fanPin, LOW);
-    delay(10);
+    delay(500);
     digitalWrite(fanPin, HIGH);
-    delay(10);
+    delay(500);
 }
 
 void Water::loop()

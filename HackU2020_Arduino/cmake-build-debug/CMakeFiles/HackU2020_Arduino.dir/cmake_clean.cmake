@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o"
   "CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o"
   "CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o"
+  "CMakeFiles/HackU2020_Arduino.dir/Water.cpp.o"
   "HackU2020_Arduino"
   "HackU2020_Arduino.pdb"
 )
