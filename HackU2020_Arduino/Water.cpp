@@ -6,7 +6,7 @@
 
 Water::Water(const Pin *fanPin) : fanPin(fanPin->getPinNumber())
 {
-    digitalWrite(fanPin, HIGH);
+
 }
 
 void Water::received(byte b)

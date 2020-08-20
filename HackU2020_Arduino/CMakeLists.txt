@@ -25,4 +25,4 @@ add_executable(HackU2020_Arduino
         ReceiveBehavior.h
         Shock.cpp Shock.h
         Pin.cpp Pin.h Pins.h Protocols.h
-        Water.h Water.cpp)
+        Water.h Water.cpp Mist.cpp Mist.h)

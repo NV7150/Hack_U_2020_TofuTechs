@@ -143,6 +143,33 @@ HackU2020_Arduino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/build
 .PHONY : HackU2020_Arduino/fast
 
+Mist.o: Mist.cpp.o
+
+.PHONY : Mist.o
+
+# target to build an object file
+Mist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Mist.cpp.o
+.PHONY : Mist.cpp.o
+
+Mist.i: Mist.cpp.i
+
+.PHONY : Mist.i
+
+# target to preprocess a source file
+Mist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Mist.cpp.i
+.PHONY : Mist.cpp.i
+
+Mist.s: Mist.cpp.s
+
+.PHONY : Mist.s
+
+# target to generate assembly for a file
+Mist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Mist.cpp.s
+.PHONY : Mist.cpp.s
+
 Pin.o: Pin.cpp.o
 
 .PHONY : Pin.o
@@ -260,6 +287,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HackU2020_Arduino"
+	@echo "... Mist.o"
+	@echo "... Mist.i"
+	@echo "... Mist.s"
 	@echo "... Pin.o"
 	@echo "... Pin.i"
 	@echo "... Pin.s"

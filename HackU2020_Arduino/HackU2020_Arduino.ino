@@ -1,6 +1,7 @@
 #include "ReceiveManager.h"
 #include "Shock.h"
 #include "Water.h"
+#include "Mist.h"
 #include "Pins.h"
 
 using namespace Pins;
@@ -19,22 +20,25 @@ using namespace Pins;
 
 ReceiveManager *receiveMan;
 Shock *shock;
-Water *water;
+Mist *mist;
+//Water *water;
 
 void setup()
 {
     Serial.begin(115200);
     receiveMan = new ReceiveManager(1);
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
-    water = new Water(&FAN_PIN);
+    mist = new Mist(&FAN_PIN);
+//    water = new Water(&FAN_PIN);
 
     receiveMan->registerReceiver(shock);
-    receiveMan->registerReceiver(water);
+    receiveMan->registerReceiver(mist);
 }
 
 void loop()
 {
     receiveMan->process();
     shock->loop();
-    water->loop();
+    mist->loop();
+//    water->loop();
 }
