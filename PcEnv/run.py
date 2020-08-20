@@ -76,7 +76,7 @@ def get_model():
 
     model.summary()
 
-    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'AudioSetModel.2.0100.ckpt')
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'AudioSetModel.3.0066.ckpt')
     model.load_weights(model_path)  # パスは必要に応じて変更
 
     return model
