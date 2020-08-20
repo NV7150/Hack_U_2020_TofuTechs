@@ -29,7 +29,7 @@ void Mist::loop() {
         }
     }
 
-    if(!processEnabled && processEnabled != requireState){
+    if(!processEnabled && processingState != requireState){
         processingState = requireState;
     }
 }
