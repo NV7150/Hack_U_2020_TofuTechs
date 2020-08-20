@@ -29,6 +29,7 @@ void setup()
     water = new Water(&FAN_PIN);
 
     receiveMan->registerReceiver(shock);
+    receiveMan->registerReceiver(water);
 }
 
 void loop()
