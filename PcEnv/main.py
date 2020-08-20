@@ -10,10 +10,12 @@ from PcEnv.AudioRecorder import check_device
 
 def process():
     rec_pros = RecordProcessor(10)
-    time.sleep(100)
-    rec_pros.is_end = True
-    rec_pros.record_th.join()
-    rec_pros.process_th.join()
+    while True:
+        i = input()
+        if 'end' in i:
+            rec_pros.is_end = True
+            rec_pros.record_th.join()
+            rec_pros.process_th.join()
 
 
 def device_check():

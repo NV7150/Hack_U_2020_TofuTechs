@@ -11,7 +11,7 @@ class SerialCommunicator:
         found = []
         for port in ports:
             # port.descriptionはうまくでない
-            if type(port.manufacturer) is str and 'Arduino' in port.manufacturer:
+            if type(port.manufacturer) is str and ('Arduino' in port.manufacturer or 'wch.cn' in port.manufacturer):
                 found.append(port)
 
         if len(found) <= 0:
