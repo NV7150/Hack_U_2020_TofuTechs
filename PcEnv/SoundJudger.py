@@ -5,6 +5,7 @@ from PcEnv.VggishParser import VggishParser
 from PcEnv.AudioRecorder import AudioRecorder
 from PcEnv.run import get_model, get_label
 
+corrections = [0, 0, -0.1]
 
 class SoundJudge:
     def __init__(self, sample_time: float, wav_path: str, device_index: int):
@@ -33,5 +34,7 @@ class SoundJudge:
         d_ts = tf.expand_dims(d_ts, 0)
 
         predict_value = self.model.predict(d_ts)
+        for i in range(3):
+            predict_value[0][i] += corrections[i]
         print(predict_value)
         return self.label[np.argmax(predict_value[0])]
