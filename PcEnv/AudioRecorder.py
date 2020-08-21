@@ -18,7 +18,7 @@ class AudioRecorder:
         fmt = pyaudio.paInt16  # 音声のフォーマット
         ch = 1  # チャンネル1(モノラル)
         sampling_rate = 44100  # サンプリング周波数(入力機器に合わせて)
-        chunk = 2 ** 11  # チャンク（データ点数）
+        chunk = 2 ** 12  # チャンク（データ点数）
         audio = pyaudio.PyAudio()
         index = self.device_index  # 録音デバイスのインデックス番号
 
