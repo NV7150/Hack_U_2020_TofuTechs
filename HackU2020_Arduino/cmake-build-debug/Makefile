@@ -143,6 +143,33 @@ HackU2020_Arduino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/build
 .PHONY : HackU2020_Arduino/fast
 
+Lights.o: Lights.cpp.o
+
+.PHONY : Lights.o
+
+# target to build an object file
+Lights.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Lights.cpp.o
+.PHONY : Lights.cpp.o
+
+Lights.i: Lights.cpp.i
+
+.PHONY : Lights.i
+
+# target to preprocess a source file
+Lights.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Lights.cpp.i
+.PHONY : Lights.cpp.i
+
+Lights.s: Lights.cpp.s
+
+.PHONY : Lights.s
+
+# target to generate assembly for a file
+Lights.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Lights.cpp.s
+.PHONY : Lights.cpp.s
+
 Mist.o: Mist.cpp.o
 
 .PHONY : Mist.o
@@ -196,6 +223,33 @@ Pin.s: Pin.cpp.s
 Pin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.s
 .PHONY : Pin.cpp.s
+
+Protocols.o: Protocols.cpp.o
+
+.PHONY : Protocols.o
+
+# target to build an object file
+Protocols.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Protocols.cpp.o
+.PHONY : Protocols.cpp.o
+
+Protocols.i: Protocols.cpp.i
+
+.PHONY : Protocols.i
+
+# target to preprocess a source file
+Protocols.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Protocols.cpp.i
+.PHONY : Protocols.cpp.i
+
+Protocols.s: Protocols.cpp.s
+
+.PHONY : Protocols.s
+
+# target to generate assembly for a file
+Protocols.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Protocols.cpp.s
+.PHONY : Protocols.cpp.s
 
 ReceiveManager.o: ReceiveManager.cpp.o
 
@@ -287,12 +341,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HackU2020_Arduino"
+	@echo "... Lights.o"
+	@echo "... Lights.i"
+	@echo "... Lights.s"
 	@echo "... Mist.o"
 	@echo "... Mist.i"
 	@echo "... Mist.s"
 	@echo "... Pin.o"
 	@echo "... Pin.i"
 	@echo "... Pin.s"
+	@echo "... Protocols.o"
+	@echo "... Protocols.i"
+	@echo "... Protocols.s"
 	@echo "... ReceiveManager.o"
 	@echo "... ReceiveManager.i"
 	@echo "... ReceiveManager.s"

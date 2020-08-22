@@ -18,6 +18,7 @@ include_directories(~/Documents/Arduino/libraries/VL53L0X)
 include_directories(/Applications/Arduino.app/Contents/Resources)
 include_directories(/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src/)
 include_directories(~/Documents/Arduino/libraries/Vector/src)
+include_directories(~/Documents/Arduino/libraries/Adafruit_NeoPixel)
 
 add_executable(HackU2020_Arduino
         HackU2020_Arduino.ino
@@ -25,4 +26,4 @@ add_executable(HackU2020_Arduino
         ReceiveBehavior.h
         Shock.cpp Shock.h
         Pin.cpp Pin.h Pins.h Protocols.h
-        Water.h Water.cpp Mist.cpp Mist.h)
+        Water.h Water.cpp Mist.cpp Mist.h Lights.cpp Lights.h Protocols.cpp)

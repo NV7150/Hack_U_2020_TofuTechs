@@ -3,6 +3,7 @@
 #include "Water.h"
 #include "Mist.h"
 #include "Pins.h"
+#include "Lights.h"
 
 using namespace Pins;
 
@@ -21,18 +22,21 @@ using namespace Pins;
 ReceiveManager *receiveMan;
 Shock *shock;
 Mist *mist;
+Lights* lights;
 //Water *water;
 
 void setup()
 {
     Serial.begin(115200);
-    receiveMan = new ReceiveManager(1);
+    receiveMan = new ReceiveManager(3);
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
     mist = new Mist(&FAN_PIN);
+    lights = new Lights(LED_RED_PIN, LED_BLUE_PIN, LED_BLUE_PIN);
 //    water = new Water(&FAN_PIN);
 
     receiveMan->registerReceiver(shock);
     receiveMan->registerReceiver(mist);
+    receiveMan->registerReceiver(lights);
 }
 
 void loop()
@@ -40,5 +44,6 @@ void loop()
     receiveMan->process();
     shock->loop();
     mist->loop();
+    lights->loop();
 //    water->loop();
 }

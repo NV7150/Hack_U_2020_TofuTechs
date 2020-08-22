@@ -11,9 +11,10 @@ Shock::Shock(const Pin *motorPin,const Pin *solenoidPin)
 }
 
 void Shock::received(byte b) {
-    if(b == PROTOCOL_IMPACT){
+    auto state = getProtocolState(PROTOCOL_IMPACT, b);
+    if(state == CORRECT){
         manageShock();
-    }else if(b == PROTOCOL_ELSE){
+    }else if(state == INCORRECT){
         disableShock();
     }
 }

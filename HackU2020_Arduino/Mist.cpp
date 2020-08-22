@@ -8,9 +8,10 @@
 Mist::Mist(const Pin* mistPin) : mistPin(mistPin->getPinNumber()) {}
 
 void Mist::received(byte b) {
-    if(b == PROTOCOL_WATER){
+    auto state = getProtocolState(PROTOCOL_WATER, b);
+    if(state == CORRECT){
         requireState = MISTING;
-    }else if(b == PROTOCOL_ELSE || b == PROTOCOL_IMPACT){
+    }else if(state == INCORRECT){
         requireState = NONE;
     }
 }

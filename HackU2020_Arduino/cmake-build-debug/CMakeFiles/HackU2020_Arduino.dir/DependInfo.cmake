@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Lights.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Lights.cpp.o"
   "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Mist.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Mist.cpp.o"
   "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Pin.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Pin.cpp.o"
+  "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Protocols.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Protocols.cpp.o"
   "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/ReceiveManager.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/ReceiveManager.cpp.o"
   "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Shock.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Shock.cpp.o"
   "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/Water.cpp" "/Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug/CMakeFiles/HackU2020_Arduino.dir/Water.cpp.o"
@@ -29,6 +31,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/Applications/Arduino.app/Contents/Resources"
   "/Applications/Arduino.app/Contents/Java/hardware/arduino/avr/libraries/Wire/src"
   "/Users/gotoudaisuke/Documents/Arduino/libraries/Vector/src"
+  "/Users/gotoudaisuke/Documents/Arduino/libraries/Adafruit_NeoPixel"
   )
 
 # Targets to which this target links.
