@@ -251,6 +251,33 @@ Protocols.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Protocols.cpp.s
 .PHONY : Protocols.cpp.s
 
+Punch.o: Punch.cpp.o
+
+.PHONY : Punch.o
+
+# target to build an object file
+Punch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Punch.cpp.o
+.PHONY : Punch.cpp.o
+
+Punch.i: Punch.cpp.i
+
+.PHONY : Punch.i
+
+# target to preprocess a source file
+Punch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Punch.cpp.i
+.PHONY : Punch.cpp.i
+
+Punch.s: Punch.cpp.s
+
+.PHONY : Punch.s
+
+# target to generate assembly for a file
+Punch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Punch.cpp.s
+.PHONY : Punch.cpp.s
+
 ReceiveManager.o: ReceiveManager.cpp.o
 
 .PHONY : ReceiveManager.o
@@ -353,6 +380,9 @@ help:
 	@echo "... Protocols.o"
 	@echo "... Protocols.i"
 	@echo "... Protocols.s"
+	@echo "... Punch.o"
+	@echo "... Punch.i"
+	@echo "... Punch.s"
 	@echo "... ReceiveManager.o"
 	@echo "... ReceiveManager.i"
 	@echo "... ReceiveManager.s"

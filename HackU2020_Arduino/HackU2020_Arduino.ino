@@ -23,7 +23,6 @@ ReceiveManager *receiveMan;
 Shock *shock;
 Mist *mist;
 Lights* lights;
-//Water *water;
 
 void setup()
 {
@@ -32,7 +31,6 @@ void setup()
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
     mist = new Mist(&FAN_PIN);
     lights = new Lights(LED_RED_PIN, LED_BLUE_PIN, LED_BLUE_PIN);
-//    water = new Water(&FAN_PIN);
 
     receiveMan->registerReceiver(shock);
     receiveMan->registerReceiver(mist);
