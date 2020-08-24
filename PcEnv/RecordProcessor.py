@@ -5,9 +5,12 @@ from PcEnv.SerialCommunicator import SerialCommunicator
 from PcEnv.SoundJudger import SoundJudge
 from PcEnv.AudioRecorder import AudioRecorder
 from PcEnv.FileLocker import FileLocker
+from PcEnv.RemoteController import remoteAction
 
 path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
 path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
+# インデックス
+# ハードの環境だと1に設定すること！
 index = 2
 baud_rate = 115200
 
@@ -77,5 +80,8 @@ class RecordProcessor:
 
             if command != 'N/A':
                 self.s_com.send_serial(command)
+
+            if code == 'impact':
+                remoteAction()
 
         self.s_com.close_serial()

@@ -1,8 +1,7 @@
 import os
 import time
 
-os.chdir('../..')
-
+# Attention! 実行の前にRecordProcessor.pyのindexを確認!
 
 from PcEnv.RecordProcessor import RecordProcessor
 from PcEnv.AudioRecorder import check_device
@@ -26,4 +25,3 @@ def device_check():
 if __name__ == '__main__':
     process()
     # check_device()
-

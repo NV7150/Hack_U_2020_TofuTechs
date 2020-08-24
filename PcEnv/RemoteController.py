@@ -1,8 +1,9 @@
 from websocket import create_connection
-import time
+
 import datetime
 
 # pip install websocket-client をすること
+
 
 def remoteAction():
     t_now = datetime.datetime.now().time()
