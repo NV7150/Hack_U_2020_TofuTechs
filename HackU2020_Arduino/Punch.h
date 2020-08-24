@@ -15,22 +15,14 @@ using namespace Pins;
 
 class Punch : public ReceiveBehavior{
 public:
-    Punch(Pin& servoPin);
+    Punch(Pin& motorPin);
 
     void received(byte b) override;
 
-    void loop();
-
 private:
-    const int DEFAULT_ANGLE = 0;
-    const int PUNCH_ANGLE = 180;
-    const int PUNCH_INTERVAL = 250;
+    const int SPEED = 255;
 
-    Servo* servo;
-
-    unsigned long lastPunch = 0;
-    bool isEnable = false;
-    bool isPunching = false;
+    int pin;
 };
 
 

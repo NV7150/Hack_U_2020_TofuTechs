@@ -24,8 +24,7 @@ Shock *shock;
 Mist *mist;
 Lights* lights;
 
-void setup()
-{
+void setup(){
     Serial.begin(115200);
     receiveMan = new ReceiveManager(3);
     shock = new Shock(&MOTOR_PIN, &SOLENOID_PIN);
@@ -37,8 +36,7 @@ void setup()
     receiveMan->registerReceiver(lights);
 }
 
-void loop()
-{
+void loop(){
     receiveMan->process();
     shock->loop();
     mist->loop();
