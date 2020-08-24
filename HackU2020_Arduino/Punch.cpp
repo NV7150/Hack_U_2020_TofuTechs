@@ -5,7 +5,7 @@
 #include "Punch.h"
 #include "Protocols.h"
 
-Punch::Punch(Pin &motorPin) : pin(motorPin.getPinNumber()){
+Punch::Punch(const Pin &motorPin) : pin(motorPin.getPinNumber()){
 
 }
 

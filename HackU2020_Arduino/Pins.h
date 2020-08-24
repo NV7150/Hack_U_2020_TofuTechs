@@ -16,6 +16,8 @@ namespace Pins
     const Pin LED_RED_PIN(4, DIG_OUT);
     const Pin LED_BLUE_PIN(5, DIG_OUT);
     const Pin LED_GREEN_PIN(6, DIG_OUT);
+
+    const Pin MOTOR_PUNCH_PIN(3, ANALOG);
 } // namespace Pins
 
 #endif //HACKU2020_ARDUINO_PINS_H

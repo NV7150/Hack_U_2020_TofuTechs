@@ -15,7 +15,7 @@ using namespace Pins;
 
 class Punch : public ReceiveBehavior{
 public:
-    Punch(Pin& motorPin);
+    Punch(const Pin& motorPin);
 
     void received(byte b) override;
 
