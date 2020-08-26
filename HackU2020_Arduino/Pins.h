@@ -19,7 +19,7 @@ namespace Pins
 
     const Pin MOTOR_PUNCH_PIN(3, ANALOG);
 
-    const Pin CIRCULATOR_PIN(10, DIG_OUT);
+    const Pin CIRCULATOR_PIN(2, DIG_OUT);
 } // namespace Pins
 
 #endif //HACKU2020_ARDUINO_PINS_H
