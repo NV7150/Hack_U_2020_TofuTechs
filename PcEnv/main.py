@@ -8,7 +8,20 @@ from PcEnv.AudioRecorder import check_device
 
 
 def process():
-    rec_pros = RecordProcessor(10)
+    size = check_device()
+
+    i = 0
+    while True:
+        print('Please enter your input device index')
+        i = int(input())
+        if i < 0 or size <= i:
+            print('invalid index')
+        else:
+            break
+
+    print('selected ' + str(i))
+
+    rec_pros = RecordProcessor(10, i, use_site=True)
     while True:
         i = input()
         if 'end' in i:

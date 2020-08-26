@@ -11,19 +11,46 @@ class SerialCommunicator:
         found = []
         for port in ports:
             # port.descriptionはうまくでない
-            if type(port.manufacturer) is str and ('Arduino' in port.manufacturer or 'wch.cn' in port.manufacturer):
+            if type(port.manufacturer) is str and 'Arduino' in port.manufacturer:
                 found.append(port)
 
         if len(found) <= 0:
-            raise EnvironmentError("No Arduino in ports")
+            print('No genuine Arduino found.')
+            print('Please choose and type your MCU port\'s index:')
+
+            for i in range(len(ports)):
+                print('index:' + str(i) + ' port_name:' + ports[i].device)
+            print('or just type \'end\' to quit program.')
+
+            while True:
+                i = input()
+                if i == 'end':
+                    print('End program')
+                    sys.exit(0)
+                else:
+                    com = int(i)
+                    if com < 0 or len(ports) <= com:
+                        print('Invalid port index')
+                        continue
+                    else:
+                        found.append(ports[com])
+                        break
 
         selected = found[0]
         if len(found) > 1:
-            print('Select from these ports: ')
+            print('Multiple port found')
+            print('Please type your MCU port index :')
             for i in range(len(found)):
-                print(str(i) + ':' + found[i].name)
+                print('index:' + str(i) + ' port_name:' + found[i].device)
 
-            index = int(input())
+            while True:
+                index = int(input())
+                if index < 0 or len(found) <= index:
+                    print('Invalid index, try again')
+                    continue
+                else:
+                    break
+
             selected = found[index]
 
         print('Selected:' + str(selected.device))

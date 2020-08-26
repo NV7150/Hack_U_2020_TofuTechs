@@ -9,9 +9,7 @@ from PcEnv.RemoteController import remoteAction
 
 path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
 path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
-# インデックス
-# ハードの環境だと1に設定すること！
-index = 2
+
 baud_rate = 115200
 
 
@@ -26,7 +24,7 @@ def synchronized(func):
 
 
 class RecordProcessor:
-    def __init__(self, sample_sec):
+    def __init__(self, sample_sec, index, use_site=False):
         self.audioRec = AudioRecorder(index, path_wav)
         self.sample_sec = sample_sec
         self.judge = SoundJudge(sample_sec, path_wav_process, index)
@@ -36,6 +34,7 @@ class RecordProcessor:
         self.is_end = False
         self.is_new_record_setted = False
         self.fileLocker = FileLocker()
+        self.use_site = use_site
 
         self.record_th.start()
         self.process_th.start()
@@ -81,7 +80,7 @@ class RecordProcessor:
             if command != 'N/A':
                 self.s_com.send_serial(command)
 
-            if code == 'impact':
+            if self.use_site and code == 'impact':
                 remoteAction()
 
         self.s_com.close_serial()

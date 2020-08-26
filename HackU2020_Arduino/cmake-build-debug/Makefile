@@ -143,6 +143,33 @@ HackU2020_Arduino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/build
 .PHONY : HackU2020_Arduino/fast
 
+Circulator.o: Circulator.cpp.o
+
+.PHONY : Circulator.o
+
+# target to build an object file
+Circulator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Circulator.cpp.o
+.PHONY : Circulator.cpp.o
+
+Circulator.i: Circulator.cpp.i
+
+.PHONY : Circulator.i
+
+# target to preprocess a source file
+Circulator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Circulator.cpp.i
+.PHONY : Circulator.cpp.i
+
+Circulator.s: Circulator.cpp.s
+
+.PHONY : Circulator.s
+
+# target to generate assembly for a file
+Circulator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HackU2020_Arduino.dir/build.make CMakeFiles/HackU2020_Arduino.dir/Circulator.cpp.s
+.PHONY : Circulator.cpp.s
+
 Lights.o: Lights.cpp.o
 
 .PHONY : Lights.o
@@ -368,6 +395,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HackU2020_Arduino"
+	@echo "... Circulator.o"
+	@echo "... Circulator.i"
+	@echo "... Circulator.s"
 	@echo "... Lights.o"
 	@echo "... Lights.i"
 	@echo "... Lights.s"
