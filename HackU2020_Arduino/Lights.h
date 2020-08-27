@@ -19,7 +19,7 @@ public:
     void loop();
 
 private:
-    const int LIGHT_INTERVAL = 500;
+    const int LIGHT_INTERVAL = 100;
 
     int redPin;
     int bluePin;

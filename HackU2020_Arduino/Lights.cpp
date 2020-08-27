@@ -32,15 +32,15 @@ void Lights::loop() {
 }
 
 void Lights::turnOn() {
-    digitalWrite(redPin, LOW);
-    digitalWrite(bluePin, LOW);
-    digitalWrite(greenPin, LOW);
+    digitalWrite(redPin, HIGH);
+    digitalWrite(bluePin, HIGH);
+    digitalWrite(greenPin, HIGH);
     isTurningOn = true;
 }
 
 void Lights::turnOff() {
-    digitalWrite(redPin, HIGH);
-    digitalWrite(bluePin, HIGH);
-    digitalWrite(greenPin, HIGH);
+    digitalWrite(redPin, LOW);
+    digitalWrite(bluePin, LOW);
+    digitalWrite(greenPin, LOW);
     isTurningOn = false;
 }

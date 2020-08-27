@@ -1,4 +1,4 @@
-"/Users/gotoudaisuke/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6397.106/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino
+"/Users/gotoudaisuke/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/202.6948.80/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/gotoudaisuke/Desktop/DevelopedApplications/Python/Hack_U_2020_TofuTechs/HackU2020_Arduino/cmake-build-debug
