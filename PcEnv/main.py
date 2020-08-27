@@ -1,7 +1,6 @@
 import os
 import time
-
-# Attention! 実行の前にRecordProcessor.pyのindexを確認!
+import glob
 
 from PcEnv.RecordProcessor import RecordProcessor
 from PcEnv.AudioRecorder import check_device
@@ -21,7 +20,7 @@ def process():
 
     print('selected ' + str(i))
 
-    rec_pros = RecordProcessor(10, i, use_site=True)
+    rec_pros = RecordProcessor(10, i, use_site=False)
     while True:
         i = input()
         if 'end' in i:
@@ -31,10 +30,6 @@ def process():
             break
 
 
-def device_check():
-    check_device()
-
-
 if __name__ == '__main__':
+    # os.chdir('..')
     process()
-    # check_device()

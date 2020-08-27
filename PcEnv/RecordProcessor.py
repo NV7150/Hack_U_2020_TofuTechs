@@ -1,5 +1,6 @@
 import threading
 import os
+import glob
 
 from PcEnv.SerialCommunicator import SerialCommunicator
 from PcEnv.SoundJudger import SoundJudge
@@ -7,8 +8,11 @@ from PcEnv.AudioRecorder import AudioRecorder
 from PcEnv.FileLocker import FileLocker
 from PcEnv.RemoteController import remoteAction
 
-path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
-path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
+
+# path_wav = os.path.join(os.path.dirname(__file__), 'RecordWav.wav')
+path_wav = os.path.join('.', 'Assets', 'RecordWav.wav')
+# path_wav_process = os.path.join(os.path.dirname(__file__), 'ProcessWav.wav')
+path_wav_process = os.path.join('.', 'Assets', 'ProcessWav.wav')
 
 baud_rate = 115200
 
