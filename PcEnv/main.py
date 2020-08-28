@@ -31,5 +31,5 @@ def process():
 
 
 if __name__ == '__main__':
-    # os.chdir('..')
+    os.chdir('..')
     process()

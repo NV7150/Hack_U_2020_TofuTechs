@@ -2,3 +2,8 @@ PcEnv/Test/
 PcEnv/checkpoints
 .vs/
 .vscode/
+Assets/
+dist/
+build/
+bkspec
+main.spec

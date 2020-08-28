@@ -28,17 +28,20 @@ def synchronized(func):
 
 
 class RecordProcessor:
-    def __init__(self, sample_sec, index, use_site=False):
+    def __init__(self, sample_sec, index, use_site=False, use_serial=True):
         self.audioRec = AudioRecorder(index, path_wav)
         self.sample_sec = sample_sec
         self.judge = SoundJudge(sample_sec, path_wav_process, index)
-        self.s_com = SerialCommunicator(baud_rate)
         self.record_th = threading.Thread(target=self.record)
         self.process_th = threading.Thread(target=self.process)
         self.is_end = False
         self.is_new_record_setted = False
         self.fileLocker = FileLocker()
         self.use_site = use_site
+        self.use_serial = use_serial
+
+        if use_serial:
+            self.s_com = SerialCommunicator(baud_rate)
 
         self.record_th.start()
         self.process_th.start()
@@ -72,6 +75,9 @@ class RecordProcessor:
 
             print(code)
 
+            if not self.use_serial:
+                continue
+
             if code == 'water':
                 command = 'w'
             elif code == 'impact':
@@ -87,4 +93,5 @@ class RecordProcessor:
             if self.use_site and code == 'impact':
                 remoteAction()
 
-        self.s_com.close_serial()
+        if self.use_serial:
+            self.s_com.close_serial()
