@@ -1,5 +1,0 @@
-{
-    "board": "arduino:avr:leonardo",
-    "programmer": "AVRISP mkII",
-    "sketch": "HackU2020_Arduino\\HackU2020_Arduino.ino"
-}
