@@ -20,7 +20,7 @@ def process():
 
     print('selected ' + str(i))
 
-    rec_pros = RecordProcessor(10, i, use_site=False)
+    rec_pros = RecordProcessor(10, i, use_site=True)
     while True:
         i = input()
         if 'end' in i:
